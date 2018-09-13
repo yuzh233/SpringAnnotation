@@ -22,4 +22,8 @@ public class UserService {
     public void insert() {
         userDao.insert();
     }
+
+    public String sayHi(String s) {
+        return "Hello," + s;
+    }
 }
