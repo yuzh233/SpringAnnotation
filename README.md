@@ -15,6 +15,7 @@
 - [异步处理](#异步处理)
     - [Servlet 3.0 异步处理](#servlet-30-异步处理)
     - [SpringMVC 异步处理](#springmvc-异步处理)
+- [SSM 零配置整合](#ssm-零配置整合)
 
 <!-- /TOC -->
 
@@ -131,7 +132,7 @@ public class WebConfig extends WebMvcConfigurerAdapter { // WebMvcConfigurerAdap
     }
 
     /**
-     * 开启静态资源访问 相当于 <mvc:default-servlet-handler>
+     *controller
      *     springMVC 默认拦截所有的请求包括静态资源，解除静态资源访问限制，但仅对WEB根目录下文件有效，如果文件在WEB-INF解除无效。
      */
     /*@Override
@@ -308,3 +309,19 @@ class DeferredResultQueue {
     }
 }
 ```
+
+## SSM 零配置整合
+
+- Web： WebInitializer 
+
+    spring context / spring mvc context / postFilter ...
+
+- Spring：RootConfig
+
+    dataSource / transactionManager / sqlSessionFactory ...
+
+- Spring MVC: DispatcherServletConfig
+
+    viewResolvers / resourceHandlers ...
+
+[demo]()

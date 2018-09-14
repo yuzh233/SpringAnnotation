@@ -1,6 +1,7 @@
 package xyz.yuzh.learn.spring.annotation.webconfig;
 
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.config.annotation.*;
@@ -27,7 +28,7 @@ public class WebConfig extends WebMvcConfigurerAdapter { // WebMvcConfigurerAdap
     }
 
     /**
-     * 开启静态资源访问 相当于 <mvc:default-servlet-handler>
+     * 开启静态资源访问 相当于 <mvc:default-servlet-controller>
      *     springMVC 默认拦截所有的请求包括静态资源，解除静态资源访问限制，但仅对WEB根目录下文件有效，如果文件在WEB-INF解除无效。
      */
     /*@Override
